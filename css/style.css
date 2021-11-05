@@ -3,7 +3,24 @@ html{
 }
 body{
     background-color: #EBF4F5;
-    color: #6796A3;
+    color: #365259;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+h1 {
+    font-size: 28pt;
+    font-weight:700;
+}
+h1 .pastriesinadash {
+    font-size: 16pt;
+    font-weight: normal;
+    line-height: 50%;
+}
+p {
+    margin-left: 1%;
+}
+.title {
+    text-align: center;
+
 }
 nav img{
     height: 50px;
@@ -75,7 +92,7 @@ nav{
 }
 #learnmore {
     display: inline;
-    background-color: #6796A3;
+    background-color: #3B5E63;
     font-size: 20px;
     border-radius: 16px;
     border: 2px solid white;
@@ -90,4 +107,51 @@ nav{
     text-decoration: none;
     margin-bottom: 100px;
 }
+.menuitems {
+    width: 200px;
+    height: auto;
+}
+.menu-sections {
+    font-size: 30px;
+    margin-left: 1%;
+}
+.menutitle {
+    display: grid;
+    grid-template-columns: 1 / -1;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    grid-row-gap: 5%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    justify-items: center;
+}
+.gridparas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 24px;
+    text-align: center;
+}
+.morespace {
+    margin-bottom: 1%;
+}
+#currentpage {
+    text-decoration: underline;
+    background-color: #d1e7ee
+}
+.maincontent {
+    margin-top: 2%;
+}
 
+.locationp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+/* footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+} */
