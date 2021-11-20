@@ -205,7 +205,15 @@ a.skip:focus, a.skip:active {
 form {
     margin-left: 2%;
 }
+.company {
+    margin-left: 2%;
+    margin-right: 2%;
+}
 
+.homecenter {
+    margin-left: 2%;
+    margin-right: 2%;
+}
 @media screen and (min-width: 800px){
     .dropbtn, .dropdown, nav h1 {
         display: none;
@@ -214,8 +222,9 @@ form {
         visibility: visible;
         display: flex;
         justify-content: space-evenly;
-        width: 100%;
         align-items: center;
+        width: 100%;
+        
     }
     .navbar a {
         text-decoration: none;
