@@ -6,23 +6,18 @@ body{
     color: #365259;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
-
-*:focus{
-    border: 2px solid black;
-  }
 main {
     min-height: 100%;
 }
-h1 {
+h1, .indextop h2 {
     font-size: 28pt;
     font-weight:700;
     width: 100%;
     text-align: center;
 }
-h1 .pastriesinadash {
-    font-size: 200pt;
-    font-weight: normal;
-    line-height: 50%;
+.indextop {
+    display: flex;
+    flex-direction: column;
 }
 p {
     margin-left: 1%;
@@ -74,21 +69,6 @@ nav{
 .dropdown:hover .dropdowncontent{
     display: block;
 }
-.parallax{
-    background-image: url('../imgs/parallax.jpg'); /* source: https://wallpapersmug.com/w/wallpaper/yummy-food-macaron-box-18238a21461 */
-    background-color: #EBF4F5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    /* parallax effect */
-    min-height: 500px; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .parallax h1 {
     font-size: 70pt;
     text-align: center;
@@ -124,6 +104,10 @@ nav{
     width: 155px;
     height: auto;
     margin-bottom: 2%;
+    opacity: .5;
+}
+.menuitems:hover {
+    opacity: 1;
 }
 .menu-sections {
     font-size: 30px;
@@ -137,7 +121,7 @@ nav{
 }
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     margin-left: 2%;
     justify-items: center; 
@@ -214,7 +198,75 @@ form {
     margin-left: 2%;
     margin-right: 2%;
 }
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:focus .flip-card-inner, .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #EBF4F5;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #EBF4F5;
+    color: #365259;
+    transform: rotateY(180deg);
+  }
+  fieldset {
+      margin-left: 2%;
+  }
+  fieldset input {
+      margin-bottom: 1%;
+  }
+  * fieldset {
+      text-align: center;
+  }
+  fieldset legend {
+    font-weight: bold;
+    font-size: 24pt;
+}
 @media screen and (min-width: 800px){
+    .parallax{
+        background-image: url('../imgs/parallax.jpg'); /* source: https://wallpapersmug.com/w/wallpaper/yummy-food-macaron-box-18238a21461 */
+        background-color: #EBF4F5;
+        
+        /* parallax effect */
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
     .dropbtn, .dropdown, nav h1 {
         display: none;
     }
@@ -233,22 +285,131 @@ form {
         color: #365259;
         padding: 2px;
     }
-    .navbar a:focus, a:hover {
+    .navbar a:focus, .navbar a:hover {
         text-decoration: underline;
         text-transform: uppercase;
     }
     .menu-sections {
         font-size: 30px;
-        grid-column: 1 / span 5;
+        grid-column: 1 / span 4;
         margin-bottom: 2%;
     }
     .grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
     .currpage {
         border: solid 1px #365259;
         border-radius: 8px;
         font-weight: 700;
+    }
+    .locationgrid {
+        display: grid;
+        grid-template-columns: 1fr, 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "a b"
+            "c b"
+            "d e"
+            "f e"
+            "g h"
+            "i h";
+    }
+    .locationgrid p {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .a {
+        grid-area: a;
+    }
+    .b {
+        grid-area: b;
+    }
+    .c {
+        grid-area: c;
+    }
+    .d {
+        grid-area: d;
+    }
+    .e {
+        grid-area: e;
+    }
+    .f {
+        grid-area: f;
+    }
+    .g {
+        grid-area: g;
+    }
+    .h {
+        grid-area: h;
+    }
+    .i {
+        grid-area: i;
+    }
+    .company {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 2%;
+        row-gap: 2%;
+    }
+
+}
+@media screen and (min-width: 1024px){
+    h1.title, .learnmorebutton{
+        display: inline;
+        text-align: center;
+    }
+    .indextop {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-right: 5%;
+        align-items:baseline;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .menu-sections {
+        grid-column: 1 / span 5;
+    }
+    .company {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    .locationgrid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "a b d e g h"
+            "c b f e i h";
+        column-gap: 5px;
+    }
+    .locationtitle {
+        font-weight: bold;
+    }
+    .locationgrid img {
+        transition: transform .2s;
+    }
+    .locationgrid img:hover {
+        transform: scale(1.5);
+    }
+    fieldset legend, .locationgrid {
+        margin-bottom: 1%;
+    }
+
+
+}
+@media (prefers-reduced-motion) {
+    .locationgrid img {
+        transition: transform 0s;
+    }
+    .parallax {
+        background-attachment: scroll;
+    }
+    .flip-card-inner {
+        transition: transform 0s;
     }
 }

@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QNK4KKLPF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4QNK4KKLPF');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
@@ -39,22 +48,22 @@
     <main>
     <h1>Store Locations</h1>
         <div class='locationgrid' id="skip">
-            <p>Paris, France</p><p>Located in the heart of Paris, get a perfect view of the Eiffel Tower out of our main window, or take a picture by our wall mural. Perfect place to go for a first date.</p>
-            <img src="imgs/location3.jpg" class="locationimg" alt="Outdoor cafe table in Paris"> <!--https://www.shutterstock.com/image-photo/blue-matcha-tea-macarons-on-table-1507921844-->
-            <p>Michigan, America</p><p>Significantly less visually pleasing than our Paris location, our Michigan location serves macarons that taste just as good. This place will make you miss Paris, but at least you can still taste it.</p>
-            <img src="imgs/location5.jpg" class="locationimg" alt="person grabbing pastries out of a fridge"> <!--https://www.shutterstock.com/image-photo/confectioner-selecting-delicious-yellow-macaron-showcase-2003835203 -->
-            <p>New York, America</p><p>Better than Michigan, but still not as good as Paris. At least the barista is kind of cute?</p>
-            <img src="imgs/locations2.jpg" class="locationimg" alt="barista making coffee behind a cafe counter"><!--https://pixabay.com/photos/coffee-shop-barista-cafe-worker-1209863/  -->
+            <p class="a locationtitle">Paris, France</p><p class="c">Located in the heart of Paris, get a perfect view of the Eiffel Tower out of our main window, or take a picture by our wall mural. Perfect place to go for a first date.</p>
+            <img src="imgs/location3.jpg" class="locationimg b" alt="Outdoor cafe table in Paris"> <!--https://www.shutterstock.com/image-photo/blue-matcha-tea-macarons-on-table-1507921844-->
+            <p class="d locationtitle">Michigan, America</p><p class="f">Significantly less visually pleasing than our Paris location, our Michigan location serves macarons that taste just as good. This place will make you miss Paris, but at least you can still taste it.</p>
+            <img src="imgs/location5.jpg" class="locationimg e" alt="person grabbing pastries out of a fridge"> <!--https://www.shutterstock.com/image-photo/confectioner-selecting-delicious-yellow-macaron-showcase-2003835203 -->
+            <p class="g locationtitle">New York, America</p><p class="i">Better than Michigan, but still not as good as Paris. At least the barista is kind of cute?</p>
+            <img src="imgs/locations2.jpg" class="locationimg h" alt="barista making coffee behind a cafe counter"><!--https://pixabay.com/photos/coffee-shop-barista-cafe-worker-1209863/  -->
         </div>
         <form action="https://formspree.io/f/mbjqnzqg" method="POST">
             <fieldset>
               <legend>Have a suggestion for a new location?</legend>
           
               <label for="name_id">Your Name</label>
-              <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+              <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required><br>
           
               <label for="email_id">Your Email</label>
-              <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
+              <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required><br>
           
               <label for="phone_id">Your Phone Number</label>
               <input type="tel" name="phone" placeholder="123-456-7890" id = "phone_id" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> <br>
