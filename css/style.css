@@ -219,6 +219,10 @@ form {
   .flip-card:focus .flip-card-inner, .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
+
+  .flip-card {
+      margin-bottom: 320px;
+  }
   
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
@@ -240,6 +244,9 @@ form {
     background-color: #EBF4F5;
     color: #365259;
     transform: rotateY(180deg);
+  }
+  .flip-card h2 {
+      font-weight: bold;
   }
   fieldset {
       margin-left: 2%;
@@ -353,7 +360,9 @@ form {
         column-gap: 2%;
         row-gap: 2%;
     }
-
+    .flip-card {
+        margin-bottom: 280px;
+    }
 }
 @media screen and (min-width: 1024px){
     h1.title, .learnmorebutton{
@@ -398,6 +407,9 @@ form {
     }
     fieldset legend, .locationgrid {
         margin-bottom: 1%;
+    }
+    .flip-card {
+        margin-bottom: 0;
     }
 
 
