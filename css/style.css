@@ -261,6 +261,10 @@ form {
     font-weight: bold;
     font-size: 24pt;
 }
+.companyfooter {
+    margin-top: 200px;
+}
+
 @media screen and (min-width: 800px){
     .parallax{
         background-image: url('../imgs/parallax.jpg'); /* source: https://wallpapersmug.com/w/wallpaper/yummy-food-macaron-box-18238a21461 */
@@ -363,8 +367,11 @@ form {
     .flip-card {
         margin-bottom: 280px;
     }
+    .companyfooter {
+        margin-top: 50px;
+    }
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1025px){
     h1.title, .learnmorebutton{
         display: inline;
         text-align: center;
